@@ -12,7 +12,6 @@
         android:orientation="vertical">
 
         <RelativeLayout
-
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#FFFFFF"
@@ -25,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/order_summary_text_view"
                 android:onClick="submitOrder"
-                android:text="Заказать" />
+                android:text="@string/order_button" />
 
             <CheckBox
                 android:id="@+id/whipped_cream_chechbox"
@@ -64,17 +63,15 @@
                     android:text="-" />
 
                 <TextView
+                    style="@style/InlineText"
                     android:id="@+id/quantityNumber"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:layout_marginVertical="0dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginBottom="8dp"
-                    android:text="0"
-                    android:textColor="#000000"
-                    android:textSize="16sp" />
+                    android:text="@string/quantityNumber"
+                    android:textColor="#000000" />
 
                 <Button
                     android:id="@+id/increment_button"
@@ -91,63 +88,59 @@
                 android:id="@+id/input_name_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Введите свое имя"
+                android:hint="@string/input_name_view"
                 android:inputType="textPersonName|textCapWords" />
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/InlineText"
+                android:id="@+id/whipped_cream"
                 android:layout_below="@id/topings_text_view_name"
                 android:layout_marginTop="5dp"
                 android:layout_toRightOf="@id/whipped_cream_chechbox"
-                android:text="Взбитые сливки"
-                android:textSize="16sp" />
+                android:text="@string/whipped_cream"
+                />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/InlineText"
+                android:id="@+id/chocolate"
                 android:layout_below="@id/whipped_cream_chechbox"
                 android:layout_marginTop="5dp"
                 android:layout_toRightOf="@id/chocolate_chechbox"
-                android:text="Шоколад"
-                android:textSize="16sp" />
+                android:text="@string/chocolate"
+                />
 
             <TextView
+                style="@style/HeaderText"
                 android:id="@+id/topings_text_view_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="Добавки"
+                android:text="@string/topings_text_view_name"
                 android:layout_below="@id/input_name_view"
-                android:textSize="24sp" />
+                />
 
             <TextView
+                style="@style/InlineText"
                 android:id="@+id/order_summary_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_below="@id/price"
                 android:layout_marginBottom="16dp"
                 android:text="RUB 0"
                 android:textColor="#000000"
-                android:textSize="16sp" />
+                />
 
             <TextView
+                style="@style/HeaderText"
                 android:id="@+id/quantity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_below="@id/chocolate_chechbox"
                 android:layout_marginTop="8dp"
-                android:text="Количество"
-                android:textSize="24sp" />
+                android:text="@string/quantity"
+                />
 
             <TextView
+                style="@style/HeaderText"
                 android:id="@+id/price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_below="@id/quantity_layout"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                android:text="Состав заказа"
-                android:textSize="24sp" />
+                android:text="@string/order_summary"
+                />
         </RelativeLayout>
     </LinearLayout>
 </ScrollView>

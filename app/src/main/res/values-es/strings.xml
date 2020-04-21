@@ -2,70 +2,68 @@
 <resources xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="ExtraTranslation"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
     <!-- Title for the application. [CHAR LIMIT=12] -->
-    <string name="app_name">Заказ кофе</string>
+    <string name="app_name">Sólo Java</string>
 
     <!-- Hint text display in the empty field for the user's name [CHAR LIMIT=20] -->
-    <string name="input_name_view" >Введите свое имя</string>
+    <string name="input_name_view" >Nombre</string>
 
     <!-- Hint text display in the empty field for the user's name [CHAR LIMIT=20] -->
-    <string name="topings_text_view_name">Добавки</string>
+    <string name="topings_text_view_name">Ingredientes</string>
 
     <!-- Hint text display in the empty field for the user's name [CHAR LIMIT=20] -->
-    <string name="whipped_cream">Взбитые сливки</string>
+    <string name="whipped_cream">Crema batida</string>
 
     <!-- Hint text display in the empty field for the user's name [CHAR LIMIT=20] -->
-    <string name="chocolate">Шоколад</string>
+    <string name="chocolate">Chocolate</string>
 
     <!-- Hint text display in the empty field for the user's name [CHAR LIMIT=20] -->
-    <string name="quantity">Количество</string>
+    <string name="quantity">Cantidad</string>
 
     <!-- Hint text display in the empty field for the user's name [CHAR LIMIT=5] -->
-    <string name="quantityNumber">1</string>
+    <string name="quantityNumber">2</string>
 
     <!-- Hint text display in the empty field for the user's name [CHAR LIMIT=20] -->
-    <string name="order_button">Заказать</string>
+    <string name="order_button">Ordenar</string>
 
     <!-- Hint text display in the order summary fiels [CHAR LIMIT=20]   -->
-    <string name="order_summary">Состав заказа</string>
-
+    <string name="order_summary">Composición</string>
     <!--
       Name for the order summary. It will be shown in the format of "Name: Amy" where Amy is the
       user's name. [CHAR LIMIT=NONE]
     -->
-    <string name="order_summary_name">Имя: <xliff:g id="order_summary_name" example="Аслан">%s</xliff:g></string>
+    <string name="order_summary_name">Nombre: <xliff:g id="order_summary_name" example="Aslan">%s</xliff:g></string>
 
     <!--
       Whipped cream topping for the order summary. It will be shown in the format of
       "Add whipped cream? true" or "Add whipped cream? false". [CHAR LIMIT=NONE]
     -->
-    <string name="order_summary_whipped_cream">Добавить взбитые сливки? </string>
+    <string name="order_summary_whipped_cream">Agregue la crema batida? </string>
 
     <!--
       Chocolate topping for the order summary. It will be shown in the format of
       "Add chocolate? true" or "Add chocolate? false". [CHAR LIMIT=NONE]
     -->
-    <string name="order_summary_chocolate">Добавить шоколад? </string>
+    <string name="order_summary_chocolate">Agregue el chocolate? </string>
 
     <!--
       Quantity of coffee cups for the order summary. It will be shown in the format of
       "Quantity: 2", where 2 is the number of cups ordered. [CHAR LIMIT=NONE]
     -->
-    <string name="order_summary_quantity">Количество: </string>
+    <string name="order_summary_quantity">Cantidad: </string>
 
     <!--
       Total price for the order summary. It will be shown in the format of
       "Total: $10" where $10 is the price. [CHAR LIMIT=NONE]
     -->
-    <string name="order_summary_price">Стоимость заказа: <xliff:g id="order_summary_quantity" example="150">%s</xliff:g></string>
+    <string name="order_summary_price">Total: <xliff:g id="order_summary_quantity" example="150">%s</xliff:g></string>
 
     <!-- Thank you message for the order summary. [CHAR LIMIT=NONE] -->
-    <string name="thank_you">Спасибо за заказ!</string>
+    <string name="thank_you">¡Gracias!</string>
 
     <!--
       Subject line for the order summary email. It will be in the format of
       "Just Java order for Amy" where Amy is the user's name. [CHAR LIMIT=NONE]
     -->
-    <string name="order_summary_email_subject">Новый заказ</string>
+    <string name="order_summary_email_subject">Sólo java para <xliff:g id="name" example="Amy">%s</xliff:g></string>
 </resources>
