@@ -1,111 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:padding="20dp"
-    tools:context=".MainActivity">
-    <TextView
-        android:id="@+id/topings_text_view_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Добавки"
-        android:textSize="24sp"
-        android:layout_marginBottom="8dp"/>
-    <CheckBox
-        android:layout_below="@id/topings_text_view_name"
-        android:id="@+id/whipped_cream_chechbox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="16dp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Взбитые сливки"
-        android:layout_toRightOf="@id/whipped_cream_chechbox"
-        android:layout_below="@id/topings_text_view_name"
-        android:textSize="16sp"
-        android:layout_marginTop="5dp" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/order_summary_text_view"
-        android:onClick="submitOrder"
-        android:text="Заказать" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="311dp"
-        android:layout_height="407dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/s1200" />
+    android:layout_height="wrap_content">
 
     <LinearLayout
-        android:id="@+id/quantity_layout"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/quantity"
-        android:layout_marginTop="16dp">
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/decrement_button"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:onClick="decrement"
-            android:text="-" />
+        <RelativeLayout
 
-        <TextView
-            android:id="@+id/quantityNumber"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="0dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="0"
-            android:textColor="#000000"
-            android:textSize="16sp" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:padding="20dp"
+            tools:context=".MainActivity">
 
-        <Button
-            android:id="@+id/increment_button"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:onClick="increment"
-            android:text="+" />
+            <Button
+                android:id="@+id/order_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/order_summary_text_view"
+                android:onClick="submitOrder"
+                android:text="Заказать" />
 
+            <CheckBox
+                android:id="@+id/whipped_cream_chechbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/topings_text_view_name"
+                android:layout_marginRight="16dp" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/chocolate_chechbox"
+                android:layout_below="@id/whipped_cream_chechbox"
+                android:layout_marginRight="16dp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="311dp"
+                android:layout_height="407dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@drawable/coffee"
+                android:layout_below="@id/order_button"/>
+
+            <LinearLayout
+                android:id="@+id/quantity_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/quantity"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/decrement_button"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:onClick="decrement"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/quantityNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="0dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="0"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/increment_button"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:onClick="increment"
+                    android:text="+" />
+
+
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/input_name_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Введите свое имя"
+                android:inputType="textPersonName|textCapWords" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/topings_text_view_name"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/whipped_cream_chechbox"
+                android:text="Взбитые сливки"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/whipped_cream_chechbox"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/chocolate_chechbox"
+                android:text="Шоколад"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/topings_text_view_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Добавки"
+                android:layout_below="@id/input_name_view"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/order_summary_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/price"
+                android:layout_marginBottom="16dp"
+                android:text="RUB 0"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chocolate_chechbox"
+                android:layout_marginTop="8dp"
+                android:text="Количество"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/quantity_layout"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Состав заказа"
+                android:textSize="24sp" />
+        </RelativeLayout>
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/order_summary_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/price"
-        android:layout_marginBottom="16dp"
-        android:text="RUB 0"
-        android:textColor="#000000"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/quantity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Количество"
-        android:layout_below="@id/whipped_cream_chechbox"
-        android:textSize="24sp"
-        android:layout_marginTop="8dp"/>
-
-    <TextView
-        android:id="@+id/price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/quantity_layout"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="Состав заказа"
-        android:textSize="24sp" />
-
-</RelativeLayout>
+</ScrollView>
